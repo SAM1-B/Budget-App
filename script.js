@@ -1,5 +1,5 @@
 let errorAlert= document.querySelector(".errorAlert");
-
+let errorAlertTwo= document.querySelector(".errorAlertTwo");
 function set(){
     if (inputBudgetValue.value!="") {
         document.getElementById("tBudgetAmount").innerHTML="#"+ inputBudgetValue.value;
@@ -48,13 +48,13 @@ function check() {
  else if(firstItem.value=="" && secondItem.value=="" && thirdItem.value=="" 
           && fourthItem.value=="" && fifthItem.value==""){
 
-      errorAlert.classList.toggle("hide");
-      error.innerHTML= "Kindly fill some spaces"
+      errorAlertTwo.classList.toggle("hide");
+      errorTwo.innerHTML= "Kindly fill some spaces"
       document.getElementById("tExpenses").innerHTML="";
       document.getElementById("tBalance").innerHTML="";
  }
  else{
-    console.log("E don doooooo")
+    console.log("E don doooooo");
  }
 }
 

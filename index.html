@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.css">
 </head>
 <body>
-    <h2 class="text-center bg-primary py-4 mb-5 text-white">NANA's BUDGET APP</h2>
+    <h2 class="text-center bg-primary py-4 mb-5 text-white">NANA's BUDGET APP <img src="img/Menu.png" alt=""></h2>
     <div class="container my-3 px-4">
             <!-- ERROR DISPLAY TAG -->
         <p class="text-center fs-3 errorAlert" id="error"></p>
@@ -16,7 +16,7 @@
             <div class="col-sm-12 col-md-5 col-lg-5 bg-white shadow py-4 px-5">
                 <h3>Budget</h3>
                 <input type="number" name="" id="inputBudgetValue" class="form-control" placeholder="Set Budget "><br>
-                <button class="btn btn-primary  p-3" onclick="set()">Set Budget</button>
+                <button class="btn btn-primary  p-3" onclick="set()">Set Budget <img src="img/wallet.png" alt=""> </button>
             </div>
             <div class="col-sm-12 col-md-5 col-lg-5 shadow py-4 px-5">
                 <div class="justify-content-center w-100 mx-auto">
@@ -27,7 +27,7 @@
                     <input type="number" name="" id="thirdItem" class="form-control mb-3" placeholder="Cost Three">
                     <input type="number" name="" id="fourthItem" class="form-control mb-3" placeholder="Cost Four">
                     <input type="number" name="" id="fifthItem" class="form-control mb-5" placeholder="Cost five">
-                    <button class="btn btn-primary w-100 py-3" onclick="check()">Check In</button>             
+                    <button class="btn btn-primary w-100 py-3" onclick="check()">Check In <img src="img/cartDownload.png" alt=""></button>             
                 </div>           
             </div>
         </div>
@@ -37,16 +37,16 @@
         <div class=" checkBoard mb-5">
             <div class="bg-primary py-3 px-4  d-flex justify-content-around text-white">
                 <div id="totalBudget ">
-                    <h5>Budget</h5>
+                    <h5 class="align-content-center">Budget <img src="img/wallet.png" alt=""></h5>
                     <p id="tBudgetAmount"></p>
                 </div>
                 <div id="totalExpense">
-                    <h5>Expenses</h5>
+                    <h5>Expenses <img src="img/cartDownload.png" alt=""></h5>
                     <p id="tExpenses"></p>
                 </div>
                 <div id="totalBalance">
-                    <h5>Balance</h5>
-                    <p id="tBalance"></p>
+                    <h5 class="align-content-center">Balance <img src="img/calc.png" alt=""></h5>
+                   <div class="d-flex"><img src="img/hash.png" alt="" height="30" style="margin-top: 10px;"> <p id="tBalance"></p> </div> 
                 </div>
             </div>
         </div>

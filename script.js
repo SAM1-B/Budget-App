@@ -1,22 +1,45 @@
 let errorAlert= document.querySelector(".errorAlert");
 let errorAlertTwo= document.querySelector(".errorAlertTwo");
+
+
+
+// SET BUDGET BUTTON
 function set(){
-    if (inputBudgetValue.value!="") {
+    if (inputBudgetValue.value=="" || inputBudgetValue.value<=0 ) {
+
+        // errorAlert.classList.remove("hide");
+        // error.innerHTML= " Set an Amount for the Budget"; 
+        
+       
+       
+    }
+    else if (inputBudgetValue.value!="" && inputBudgetValue.value!=0 ) {
+
+        errorAlert.classList.remove("hide");
+        
+        
         document.getElementById("tBudgetAmount").innerHTML="#"+ inputBudgetValue.value;
         document.getElementById("tBudgetAmount").style.fontSize="30px";
         document.getElementById("tBudgetAmount").style.fontWeight="bold";
         errorAlert.classList.toggle("hide");
+        // inputBudgetValue.value= "";
+        document.getElementById("tExpenses").innerHTML="";
+        document.getElementById("tBalance").innerHTML="";
+       
+    }else{
+
     }
-    else{
-        errorAlert.classList.toggle("hide");
-        error.innerHTML= " Set an Amount for the Budget"
-        
-        
-    }
+
+    
 }
 
 
 
+
+
+
+
+// CHECK IN BUTTON
 function check() {
 
   
@@ -33,16 +56,29 @@ function check() {
     document.getElementById("tExpenses").style.fontSize="30px";
     document.getElementById("tExpenses").style.fontWeight="bold";
    
+
+    // BALANCE CALCULATION
     document.getElementById("tBalance").innerHTML=(Number(inputBudgetValue.value))-sum;
     document.getElementById("tBalance").style.fontSize="30px";
     document.getElementById("tBalance").style.fontWeight="bold";
 
-    if (sum > (Number(inputBudgetValue.value))) {
 
-        errorAlert.classList.toggle("hide");
+   //TO NULLIFY THE INPUT FIELDS AFTER THE VALUES ARE ACCEPTED
+    document.getElementById("firstItem").value="";
+    document.getElementById("secondItem").value="";
+    document.getElementById("thirdItem").value="";
+    document.getElementById("fourthItem").value="";
+    document.getElementById("fifthItem").value="";
+
+    if (sum > (Number(inputBudgetValue.value))) {
         error.innerHTML= " THIS IS BEYOND YOUR BUDGET"
+        errorAlert.classList.remove("hide");
+        
         document.getElementById("tExpenses").innerHTML="";
         document.getElementById("tBalance").innerHTML="";
+    }
+    else{
+        errorAlert.classList.remove("hide");
     }
  } 
  else if(firstItem.value=="" && secondItem.value=="" && thirdItem.value=="" 
@@ -52,11 +88,17 @@ function check() {
       errorTwo.innerHTML= "Kindly fill some spaces"
       document.getElementById("tExpenses").innerHTML="";
       document.getElementById("tBalance").innerHTML="";
+
+
+        
+        
  }
  else{
     console.log("E don doooooo");
  }
 }
+
+
 
 
 

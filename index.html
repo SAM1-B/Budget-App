@@ -4,9 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.css">
 </head>
 <body>
+
+    <div class="container my-3 px-4">
+        <h2 class="text-center bg-primary py-4 mb-5 text-white">NANA's BUDGET APP</h2>
+        <!-- ERROR DISPLAY TAG -->
+        <p class="text-center fs-3 errorAlert" id="error"></p>
+        <div class="row gap-5 justify-content-center">
+            <div class="col-sm-12 col-md-5 col-lg-5 bg-white shadow py-4 px-5">
+                <h3>Budget</h3>
+                <input type="number" name="" id="inputBudgetValue" class="form-control" placeholder="Set Budget "><br>
+                <button class="btn btn-primary w-50 p-3" onclick="set()">Set Budget</button>
+            </div>
+            <div class="col-sm-12 col-md-5 col-lg-5 shadow py-4 px-5">
+                <div class="justify-content-center w-75 mx-auto">
+                    
+                    <input type="number" name="" id="firstItem" class="form-control mb-3" placeholder="First Item">
+                    <input type="number" name="" id="secondItem" class="form-control mb-3" placeholder="Second Item">
+                    <input type="number" name="" id="thirdItem" class="form-control mb-3" placeholder="Third Item">
+                    <input type="number" name="" id="fourthItem" class="form-control mb-3" placeholder="Fourth Item">
+                    <input type="number" name="" id="fifthItem" class="form-control mb-5" placeholder="Fifth Item">
+                    <button class="btn btn-primary w-100 py-3" onclick="check()">Check In</button>             
+                </div>           
+            </div>
+        </div>
+        </div>
+
+        <!-- TOTALS CHECKBOARD -->
+        <div class="container checkBoard mb-5">
+            <div class="bg-primary py-3 px-4  d-flex justify-content-between text-white">
+                <div id="totalBudget ">
+                    <h3>Total Budget</h3>
+                    <p id="tBudgetAmount"></p>
+                </div>
+                <div id="totalExpense">
+                    <h3>Expenses</h3>
+                    <p id="tExpenses"></p>
+                </div>
+                <div id="totalBalance">
+                    <h3>Balance</h3>
+                    <p id="tBalance"></p>
+                </div>
+            </div>
+        </div>
+        
     
+    
+    <script src="script.js"></script>
 </body>
 </html>
